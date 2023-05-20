@@ -68,7 +68,6 @@ vtxtable powerlabels 25 200 600 100
 #$ OPTION END
 
 set vtx_band = 5
-set vtx_freq = 5917
 
 #$ OPTION BEGIN (CHECKED): Full Power
 set vtx_power = 4
@@ -76,6 +75,7 @@ set vtx_power = 4
 
 #$ OPTION BEGIN (CHECKED): Channel 8
 set vtx_channel = 8
+set vtx_freq = 5917
 #$ OPTION END
 
 #$ OPTION BEGIN (UNCHECKED): Channel 1
