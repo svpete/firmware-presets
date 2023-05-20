@@ -17,7 +17,7 @@
 # serial
 serial 0 8192 115200 57600 0 115200
 
-#$ OPTION BEGIN (UNCHECKED): Rush Tank Solo Table
+#$ OPTION BEGIN (CHECKED): Rush Table
 # vtxtable
 vtxtable bands 6
 vtxtable channels 8
