@@ -184,6 +184,7 @@
       "sugarK",
       "SupaflyFPV",
       "Sv_Pete",
+      "Team Angry Bees",
       "UAV Tech (Mark Spatz)"
     ],
     "keywords": [
@@ -2458,6 +2459,19 @@
       "author": "Ivan Efimov (Limon)",
       "force_options_review": true,
       "priority": 10000000000
+    },
+    {
+      "fullPath": "presets/4.3/tune/ANGRYBEES_7inch.txt",
+      "hash": "e3409dd0c5f270d73142aece4012a7e06f56cdcd46a4c0c308edce5a0868acb8",
+      "title": "ANGRYBEES 7 INCH",
+      "firmware_version": [
+        "4.3"
+      ],
+      "category": "TUNE",
+      "status": "EXPERIMENTAL",
+      "keywords": [],
+      "author": "Team Angry Bees",
+      "priority": 1000000000000
     },
     {
       "fullPath": "presets/4.3/tune/Street_League_LeadFingers.txt",

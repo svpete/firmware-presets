@@ -1,0 +1,226 @@
+#$ TITLE: ANGRYBEES 7 INCH
+#$ FIRMWARE_VERSION: 4.3
+#$ CATEGORY: TUNE
+#$ STATUS: EXPERIMENTAL
+#$ KEYWORDS: 
+#$ AUTHOR: Team Angry Bees
+
+defaults nosave
+
+set name = -ANGRYBEES-
+
+# feature
+feature -TELEMETRY
+feature ESC_SENSOR
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 13 3 1675 2075 0 0
+
+# rxfail
+rxfail 0 h
+rxfail 1 h
+rxfail 2 h
+rxfail 3 h
+
+# serial
+serial 0 2048 115200 57600 0 115200
+serial 1 0 115200 57600 0 115200
+serial 3 0 115200 57600 0 115200
+serial 5 64 115200 57600 0 115200
+
+# master
+set serialrx_provider = CRSF
+set dshot_bidir = ON
+set yaw_motors_reversed = ON
+
+#$ OPTION BEGIN (CHECKED): Rush Table
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BAND_A   A CUSTOM  5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BAND_B   B CUSTOM  5733 5752 5771 5790 5999 5828 5847 5866
+vtxtable band 3 BAND_E   E CUSTOM  5705 5685 5665 5645 5885 5905 5925 5945
+vtxtable band 4 AIRWAVE  F CUSTOM  5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 LOWRACE  L CUSTOM  5362 5399 5436 5473 5510 5547 5584 5621
+vtxtable powerlevels 4
+vtxtable powervalues 14 26 29 32
+vtxtable powerlabels 25 400 800 MAX
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): AKK Table
+# vtxtable
+vtxtable bands 5
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A CUSTOM  5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B CUSTOM  5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E CUSTOM  5705 5685 5665    0 5885 5905    0    0
+vtxtable band 4 FATSHARK F CUSTOM  5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable powerlevels 4
+vtxtable powervalues 0 1 2 3
+vtxtable powerlabels 25 200 600 100
+#$ OPTION END
+
+set vtx_band = 5
+set vtx_freq = 5917
+
+#$ OPTION BEGIN (CHECKED): Full Power
+set vtx_power = 4
+#$ OPTION END
+
+#$ OPTION BEGIN (CHECKED): Channel 8
+set vtx_channel = 8
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): Channel 1
+set vtx_channel = 1
+set vtx_freq = 5658
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): Low Power
+set vtx_power = 1
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): Drop System
+feature SERVO_TILT
+resource MOTOR 8 NONE
+resource SERVO 1 B04
+servo 0 1000 2000 1500 100 5
+#$ OPTION END
+
+#$ OPTION BEGIN (CHECKED): OSD
+set osd_warn_core_temp = OFF
+set osd_vbat_pos = 2081
+set osd_rssi_pos = 2425
+set osd_link_quality_pos = 89
+set osd_rssi_dbm_pos = 299
+set osd_tim_2_pos = 2103
+set osd_flymode_pos = 57
+set osd_throttle_pos = 2401
+set osd_vtx_channel_pos = 21
+set osd_crosshairs_pos = 2253
+set osd_current_pos = 471
+set osd_mah_drawn_pos = 2412
+set osd_craft_name_pos = 2090
+set osd_gps_speed_pos = 129
+set osd_gps_lon_pos = 1
+set osd_gps_lat_pos = 33
+set osd_gps_sats_pos = 57
+set osd_home_dir_pos = 14
+set osd_home_dist_pos = 65
+set osd_pid_roll_pos = 161
+set osd_pid_pitch_pos = 129
+set osd_pid_yaw_pos = 97
+set osd_avg_cell_voltage_pos = 2113
+set osd_disarmed_pos = 288
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): Adjustments
+# adjrange
+adjrange 0 0 2 900 1300 6 3 0 0
+adjrange 1 0 2 1300 1700 7 3 0 0
+adjrange 2 0 2 1700 2100 8 3 0 0
+set osd_pid_roll_pos = 2209
+set osd_pid_pitch_pos = 2177
+set osd_pid_yaw_pos = 2145
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): FlyMod Gravity 1300KV PID/Filters
+
+set dyn_notch_count = 5
+set dyn_notch_min_hz = 100
+set simplified_gyro_filter = OFF
+set simplified_gyro_filter_multiplier = 60
+
+profile 0
+
+# profile 0
+set profile_name = 6S
+set p_pitch = 53
+set i_pitch = 42
+set d_pitch = 43
+set f_pitch = 0
+set p_roll = 53
+set i_roll = 42
+set d_roll = 43
+set f_roll = 0
+set p_yaw = 90
+set i_yaw = 90
+set d_yaw = 12
+set f_yaw = 0
+set d_min_roll = 31
+set d_min_pitch = 31
+set auto_profile_cell_count = 6
+set thrust_linear = 20
+set dyn_idle_min_rpm = 40
+set simplified_pids_mode = OFF
+set simplified_i_gain = 95
+set simplified_d_gain = 90
+set simplified_pi_gain = 110
+set simplified_dterm_filter = OFF
+set simplified_dterm_filter_multiplier = 120
+
+profile 1
+
+# profile 1
+set profile_name = 5S
+set p_pitch = 52
+set i_pitch = 34
+set d_pitch = 31
+set f_pitch = 0
+set p_roll = 52
+set i_roll = 34
+set d_roll = 31
+set f_roll = 0
+set p_yaw = 60
+set i_yaw = 70
+set f_yaw = 0
+set d_min_roll = 25
+set d_min_pitch = 25
+set auto_profile_cell_count = 5
+set thrust_linear = 20
+set dyn_idle_min_rpm = 40
+set simplified_pids_mode = OFF
+set simplified_i_gain = 95
+set simplified_d_gain = 90
+set simplified_pi_gain = 110
+set simplified_dterm_filter = OFF
+set simplified_dterm_filter_multiplier = 120
+
+profile 2
+
+# profile 2
+set profile_name = 5S
+set p_pitch = 52
+set i_pitch = 34
+set d_pitch = 31
+set f_pitch = 0
+set p_roll = 52
+set i_roll = 34
+set d_roll = 31
+set f_roll = 0
+set p_yaw = 60
+set i_yaw = 70
+set f_yaw = 0
+set d_min_roll = 25
+set d_min_pitch = 25
+set auto_profile_cell_count = 5
+set thrust_linear = 20
+set dyn_idle_min_rpm = 40
+set simplified_pids_mode = OFF
+set simplified_i_gain = 95
+set simplified_d_gain = 90
+set simplified_pi_gain = 110
+set simplified_dterm_filter = OFF
+set simplified_dterm_filter_multiplier = 120
+
+# restore original profile selection
+profile 0
+
+#$ OPTION END
