@@ -38,7 +38,7 @@ set serialrx_provider = CRSF
 set dshot_bidir = ON
 set yaw_motors_reversed = ON
 
-#$ OPTION BEGIN (CHECKED): Rush Table
+#$ OPTION BEGIN (CHECKED): Rush VTX
 # vtxtable
 vtxtable bands 6
 vtxtable channels 8
@@ -53,7 +53,7 @@ vtxtable powervalues 14 26 29 32
 vtxtable powerlabels 25 400 800 MAX
 #$ OPTION END
 
-#$ OPTION BEGIN (UNCHECKED): AKK Table
+#$ OPTION BEGIN (UNCHECKED): AKK VTX
 # vtxtable
 vtxtable bands 5
 vtxtable channels 8
@@ -223,4 +223,80 @@ set simplified_dterm_filter_multiplier = 120
 # restore original profile selection
 profile 0
 
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): XING-E Pro 2306 1700KV PID/Filters
+# master
+set dyn_notch_count = 1
+set dyn_notch_q = 500
+set dyn_notch_min_hz = 100
+set simplified_gyro_filter = OFF
+set simplified_gyro_filter_multiplier = 60
+
+profile 0
+
+# profile 0
+set profile_name = 4S
+set p_pitch = 63
+set i_pitch = 63
+set d_pitch = 57
+set f_pitch = 100
+set p_roll = 61
+set i_roll = 59
+set d_roll = 52
+set f_roll = 100
+set p_yaw = 80
+set i_yaw = 83
+set f_yaw = 100
+set d_min_roll = 27
+set d_min_pitch = 30
+set auto_profile_cell_count = 4
+set thrust_linear = 20
+set dyn_idle_min_rpm = 40
+set simplified_pids_mode = OFF
+set simplified_i_gain = 95
+set simplified_d_gain = 90
+set simplified_pi_gain = 110
+set simplified_dterm_filter = OFF
+set simplified_dterm_filter_multiplier = 120
+
+profile 1
+
+# profile 1
+set profile_name = 6S
+set p_pitch = 75
+set i_pitch = 54
+set d_pitch = 50
+set f_pitch = 100
+set p_roll = 73
+set i_roll = 50
+set d_roll = 44
+set f_roll = 100
+set p_yaw = 85
+set f_yaw = 100
+set auto_profile_cell_count = 6
+set simplified_pids_mode = OFF
+
+profile 2
+
+# profile 2
+set profile_name = 5S
+set p_pitch = 69
+set i_pitch = 88
+set d_pitch = 67
+set f_pitch = 100
+set p_roll = 64
+set i_roll = 89
+set d_roll = 69
+set f_roll = 100
+set p_yaw = 67
+set i_yaw = 86
+set f_yaw = 100
+set d_min_roll = 35
+set d_min_pitch = 37
+set auto_profile_cell_count = 5
+set simplified_pids_mode = OFF
+
+# restore original profile selection
+profile 2
 #$ OPTION END
