@@ -183,6 +183,7 @@
       "Sugar K",
       "sugarK",
       "SupaflyFPV",
+      "Sv_Pete",
       "UAV Tech (Mark Spatz)"
     ],
     "keywords": [
@@ -3581,7 +3582,7 @@
     },
     {
       "fullPath": "presets/4.3/vtx/rush_tank_solo.txt",
-      "hash": "02e3e821de87e8e5de674c8f1d6b044d2ea26106b67bb6ed1df1b5c3fe19e65c",
+      "hash": "0b5bf84294759a73f96274ad5a12a099926ce12971bac48784ad4d29b7bcbd0d",
       "title": "Rush Tank Solo VTX tables",
       "firmware_version": [
         "4.2",
@@ -3600,7 +3601,7 @@
         "tank solo",
         "tiny tank"
       ],
-      "author": "Directory",
+      "author": "Sv_Pete",
       "priority": 1000000
     },
     {
