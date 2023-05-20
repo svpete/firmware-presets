@@ -300,3 +300,39 @@ set simplified_pids_mode = OFF
 # restore original profile selection
 profile 2
 #$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): BrotherHobby Avenger 2806.5 1300KV PID/Filters
+# master
+set dyn_notch_count = 5
+set dyn_notch_q = 500
+set dyn_notch_min_hz = 100
+
+set simplified_gyro_filter = OFF
+set simplified_gyro_filter_multiplier = 60
+
+profile 0
+
+# profile 0
+set p_pitch = 71
+set i_pitch = 52
+set d_pitch = 60
+set f_pitch = 0
+set p_roll = 71
+set i_roll = 52
+set d_roll = 60
+set f_roll = 0
+set p_yaw = 90
+set i_yaw = 90
+set f_yaw = 0
+set d_min_roll = 25
+set d_min_pitch = 25
+set thrust_linear = 20
+set dyn_idle_min_rpm = 40
+set simplified_pids_mode = OFF
+set simplified_i_gain = 95
+set simplified_d_gain = 90
+set simplified_pi_gain = 110
+set simplified_dterm_filter = OFF
+set simplified_dterm_filter_multiplier = 120
+
+#$ OPTION END
