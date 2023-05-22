@@ -225,6 +225,7 @@ set simplified_dterm_filter_multiplier = 120
 # restore original profile selection
 profile 0
 
+set osd_pid_profile_name_pos = 2145
 #$ OPTION END
 
 #$ OPTION BEGIN (UNCHECKED): XING-E Pro 2306 1700KV PID/Filters
@@ -301,6 +302,8 @@ set simplified_pids_mode = OFF
 
 # restore original profile selection
 profile 2
+
+set osd_pid_profile_name_pos = 2145
 #$ OPTION END
 
 #$ OPTION BEGIN (UNCHECKED): BrotherHobby Avenger 2806.5 1300KV PID/Filters
