@@ -27,6 +27,8 @@ rxfail 1 h
 rxfail 2 h
 rxfail 3 h
 
+set failsafe_delay = 200
+
 # serial
 serial 0 2048 115200 57600 0 115200
 serial 1 0 115200 57600 0 115200
