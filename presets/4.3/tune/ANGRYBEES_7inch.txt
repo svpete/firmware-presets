@@ -5,7 +5,7 @@
 #$ KEYWORDS: 
 #$ AUTHOR: Team Angry Bees
 
-#$ OPTION BEGIN (CHECKED): Rush VTX
+#$ OPTION BEGIN (CHECKED): RESET to Defaults
 defaults nosave
 #$ OPTION END
 
