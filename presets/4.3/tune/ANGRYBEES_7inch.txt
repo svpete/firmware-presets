@@ -5,7 +5,7 @@
 #$ KEYWORDS: 
 #$ AUTHOR: Team Angry Bees
 
-#$ OPTION BEGIN (CHECKED): RESET to Defaults
+#$ OPTION BEGIN (CHECKED): RESET
 defaults nosave
 #$ OPTION END
 
