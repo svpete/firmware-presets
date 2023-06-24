@@ -45,7 +45,6 @@ rxfail 7 h
 rxfail 8 h
 rxfail 9 h
 rxfail 10 h
-save
 
 # serial
 serial 0 2048 115200 57600 0 115200
