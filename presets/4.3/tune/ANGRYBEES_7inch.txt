@@ -58,6 +58,7 @@ serial 5 64 115200 57600 0 115200
 set serialrx_provider = CRSF
 set dshot_bidir = ON
 set yaw_motors_reversed = ON
+set motor_pwm_protocol = DSHOT300
 
 #$ OPTION BEGIN (CHECKED): Rush VTX
 # vtxtable
