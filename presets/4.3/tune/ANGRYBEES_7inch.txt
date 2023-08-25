@@ -369,6 +369,9 @@ set simplified_pids_mode = OFF
 #$ OPTION END
 
 #$ OPTION BEGIN (UNCHECKED): BrotherHobby 1300KV PID/Filters 8 inch
+
+set name = -BUMBLEBEE-
+
 set dyn_notch_count = 5
 set dyn_notch_min_hz = 100
 
