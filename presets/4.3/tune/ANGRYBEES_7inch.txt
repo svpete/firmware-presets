@@ -367,3 +367,94 @@ set d_min_pitch = 40
 set simplified_pids_mode = OFF
 
 #$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): BrotherHobby 1300KV PID/Filters 8 inch
+set dyn_notch_count = 5
+set dyn_notch_min_hz = 100
+
+profile 0
+
+# profile 0
+set profile_name = 6S
+set p_pitch = 51
+set i_pitch = 40
+set d_pitch = 44
+set f_pitch = 100
+set p_roll = 51
+set i_roll = 40
+set d_roll = 44
+set f_roll = 100
+set p_yaw = 90
+set i_yaw = 90
+set d_yaw = 12
+set f_yaw = 100
+set d_min_roll = 38
+set d_min_pitch = 38
+set auto_profile_cell_count = 6
+set thrust_linear = 20
+set dyn_idle_min_rpm = 40
+set simplified_pids_mode = OFF
+set simplified_i_gain = 95
+set simplified_d_gain = 90
+set simplified_pi_gain = 110
+set simplified_dterm_filter = OFF
+set simplified_dterm_filter_multiplier = 120
+
+profile 1
+
+# profile 1
+set profile_name = 5S
+set p_pitch = 52
+set i_pitch = 34
+set d_pitch = 31
+set f_pitch = 0
+set p_roll = 52
+set i_roll = 34
+set d_roll = 31
+set f_roll = 0
+set p_yaw = 60
+set i_yaw = 70
+set f_yaw = 0
+set d_min_roll = 25
+set d_min_pitch = 25
+set auto_profile_cell_count = 5
+set thrust_linear = 20
+set dyn_idle_min_rpm = 40
+set simplified_pids_mode = OFF
+set simplified_i_gain = 95
+set simplified_d_gain = 90
+set simplified_pi_gain = 110
+set simplified_dterm_filter = OFF
+set simplified_dterm_filter_multiplier = 120
+
+profile 2
+
+# profile 2
+set profile_name = 5S
+set p_pitch = 52
+set i_pitch = 34
+set d_pitch = 31
+set f_pitch = 0
+set p_roll = 52
+set i_roll = 34
+set d_roll = 31
+set f_roll = 0
+set p_yaw = 60
+set i_yaw = 70
+set f_yaw = 0
+set d_min_roll = 25
+set d_min_pitch = 25
+set auto_profile_cell_count = 5
+set thrust_linear = 20
+set dyn_idle_min_rpm = 40
+set simplified_pids_mode = OFF
+set simplified_i_gain = 95
+set simplified_d_gain = 90
+set simplified_pi_gain = 110
+set simplified_dterm_filter = OFF
+set simplified_dterm_filter_multiplier = 120
+
+# restore original profile selection
+profile 0
+
+#$ OPTION END
