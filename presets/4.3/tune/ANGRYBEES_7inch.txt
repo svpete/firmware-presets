@@ -352,18 +352,18 @@ set dyn_notch_min_hz = 75
 
 profile 0
 
-# profile 0
 set p_pitch = 50
-set i_pitch = 67
+set i_pitch = 76
+set d_pitch = 57
 set f_pitch = 100
 set p_roll = 50
-set i_roll = 67
-set d_roll = 46
+set i_roll = 76
+set d_roll = 57
 set f_roll = 100
 set p_yaw = 70
 set f_yaw = 100
-set d_min_roll = 40
-set d_min_pitch = 40
+set d_min_roll = 48
+set d_min_pitch = 48
 set simplified_pids_mode = OFF
 
 #$ OPTION END
