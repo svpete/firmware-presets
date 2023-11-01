@@ -143,7 +143,7 @@ set osd_vtx_channel_pos = 21
 set osd_crosshairs_pos = 2253
 set osd_current_pos = 471
 set osd_mah_drawn_pos = 2400
-set osd_craft_name_pos = 2121
+set osd_craft_name_pos = 2120
 set osd_gps_speed_pos = 129
 set osd_gps_lon_pos = 1
 set osd_gps_lat_pos = 33
@@ -155,9 +155,14 @@ set osd_altitude_pos = 2135
 set osd_pid_roll_pos = 161
 set osd_pid_pitch_pos = 129
 set osd_pid_yaw_pos = 97
-set osd_warnings_pos = 14698
+set osd_warnings_pos = 14697
 set osd_avg_cell_voltage_pos = 2113
 set osd_disarmed_pos = 288
+set vtx_band = 5
+set vtx_channel = 8
+set vtx_power = 4
+set vtx_low_power_disarm = UNTIL_FIRST_ARM
+set vtx_freq = 5917
 set vcd_video_system = PAL
 #$ OPTION END
 
