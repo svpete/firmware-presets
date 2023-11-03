@@ -143,7 +143,7 @@ set osd_vtx_channel_pos = 21
 set osd_crosshairs_pos = 2253
 set osd_current_pos = 471
 set osd_mah_drawn_pos = 2400
-set osd_craft_name_pos = 2120
+set osd_craft_name_pos = 2121
 set osd_gps_speed_pos = 129
 set osd_gps_lon_pos = 1
 set osd_gps_lat_pos = 33
@@ -352,6 +352,7 @@ set osd_pid_profile_name_pos = 2145
 #$ OPTION BEGIN (UNCHECKED): FlyMod Gravity 900KV PID/Filters
 
 set name = -ANGRYHORNET-
+set osd_craft_name_pos = 2120
 
 # master
 set dyn_notch_count = 5
