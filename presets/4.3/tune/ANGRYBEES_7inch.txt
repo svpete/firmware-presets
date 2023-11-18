@@ -404,7 +404,6 @@ set simplified_gyro_filter_multiplier = 80
 profile 0
 
 # profile 0
-set simplified_dterm_filter = OFF
 set dterm_lpf1_dyn_min_hz = 60
 set dterm_lpf1_dyn_max_hz = 120
 set dterm_lpf1_static_hz = 60
@@ -456,7 +455,6 @@ set simplified_pids_mode = OFF
 set simplified_i_gain = 95
 set simplified_d_gain = 90
 set simplified_pi_gain = 110
-set simplified_dterm_filter = OFF
 set dterm_lpf1_dyn_min_hz = 60
 set dterm_lpf1_dyn_max_hz = 120
 set dterm_lpf1_static_hz = 60
@@ -486,7 +484,6 @@ set simplified_pids_mode = OFF
 set simplified_i_gain = 95
 set simplified_d_gain = 90
 set simplified_pi_gain = 110
-set simplified_dterm_filter = OFF
 set dterm_lpf1_dyn_min_hz = 60
 set dterm_lpf1_dyn_max_hz = 120
 set dterm_lpf1_static_hz = 60
