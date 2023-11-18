@@ -392,13 +392,24 @@ set simplified_dterm_filter_multiplier = 80
 
 set name = -BUMBLEBEE-
 
+set gyro_lpf1_static_hz = 200
+set gyro_lpf2_static_hz = 400
 set dyn_notch_count = 5
 set dyn_notch_min_hz = 100
+set gyro_lpf1_dyn_min_hz = 200
+set gyro_lpf1_dyn_max_hz = 400
+set rpm_filter_min_hz = 80
+set simplified_gyro_filter_multiplier = 80
 
 profile 0
 
 # profile 0
-set profile_name = 6S
+set simplified_dterm_filter = OFF
+set dterm_lpf1_dyn_min_hz = 60
+set dterm_lpf1_dyn_max_hz = 120
+set dterm_lpf1_static_hz = 60
+set dterm_lpf2_static_hz = 120
+set simplified_dterm_filter_multiplier = 80
 set p_pitch = 51
 set i_pitch = 40
 set d_pitch = 44
@@ -420,8 +431,6 @@ set simplified_pids_mode = OFF
 set simplified_i_gain = 95
 set simplified_d_gain = 90
 set simplified_pi_gain = 110
-set simplified_dterm_filter = OFF
-set simplified_dterm_filter_multiplier = 120
 
 profile 1
 
@@ -448,8 +457,11 @@ set simplified_i_gain = 95
 set simplified_d_gain = 90
 set simplified_pi_gain = 110
 set simplified_dterm_filter = OFF
-set simplified_dterm_filter_multiplier = 120
-
+set dterm_lpf1_dyn_min_hz = 60
+set dterm_lpf1_dyn_max_hz = 120
+set dterm_lpf1_static_hz = 60
+set dterm_lpf2_static_hz = 120
+set simplified_dterm_filter_multiplier = 80
 profile 2
 
 # profile 2
@@ -475,7 +487,11 @@ set simplified_i_gain = 95
 set simplified_d_gain = 90
 set simplified_pi_gain = 110
 set simplified_dterm_filter = OFF
-set simplified_dterm_filter_multiplier = 120
+set dterm_lpf1_dyn_min_hz = 60
+set dterm_lpf1_dyn_max_hz = 120
+set dterm_lpf1_static_hz = 60
+set dterm_lpf2_static_hz = 120
+set simplified_dterm_filter_multiplier = 80
 
 # restore original profile selection
 profile 0
