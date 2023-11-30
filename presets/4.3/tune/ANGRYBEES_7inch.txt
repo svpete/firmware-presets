@@ -494,3 +494,42 @@ set simplified_dterm_filter_multiplier = 80
 profile 0
 
 #$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): BrotherHobby 1300KV PID/Filters 8 inch
+
+set name = -BOMBLEBEE-
+set osd_craft_name_pos = 2121
+
+# master
+set gyro_lpf1_static_hz = 200
+set gyro_lpf2_static_hz = 400
+set dyn_notch_count = 5
+set dyn_notch_min_hz = 75
+set gyro_lpf1_dyn_min_hz = 200
+set gyro_lpf1_dyn_max_hz = 400
+
+set simplified_gyro_filter_multiplier = 80
+set rpm_filter_min_hz = 60
+
+profile 0
+
+set dterm_lpf1_dyn_min_hz = 60
+set dterm_lpf1_dyn_max_hz = 120
+set dterm_lpf1_static_hz = 60
+set dterm_lpf2_static_hz = 120
+set p_pitch = 89
+set i_pitch = 44
+set d_pitch = 60
+set f_pitch = 100
+set p_roll = 89
+set i_roll = 44
+set d_roll = 60
+set f_roll = 100
+set p_yaw = 70
+set f_yaw = 100
+set d_min_roll = 45
+set d_min_pitch = 45
+set simplified_pids_mode = OFF
+set simplified_dterm_filter_multiplier = 80
+
+#$ OPTION END
