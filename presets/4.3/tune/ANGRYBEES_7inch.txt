@@ -495,7 +495,7 @@ profile 0
 
 #$ OPTION END
 
-#$ OPTION BEGIN (UNCHECKED): Flashhobby Artur 900KV PID/Filters 10 inch
+#$ OPTION BEGIN (UNCHECKED): Flashhobby ARTUR 900KV PID/Filters 10 inch
 
 set name = -BOMBLEBEE-
 set osd_craft_name_pos = 2121
