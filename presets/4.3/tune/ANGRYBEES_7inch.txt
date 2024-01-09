@@ -59,7 +59,7 @@ set dshot_bidir = ON
 set yaw_motors_reversed = ON
 set motor_pwm_protocol = DSHOT300
 
-#$ OPTION BEGIN (UNCHECKED): Rush VTX
+#$ OPTION BEGIN (CHECKED): Rush VTX
 # vtxtable
 vtxtable bands 6
 vtxtable channels 8
@@ -102,7 +102,7 @@ vtxtable powervalues 0 1 2 3
 vtxtable powerlabels 200 400 800 160
 #$ OPTION END
 
-#$ OPTION BEGIN (CHECKED): iFlight blitz 1.6 VTX
+#$ OPTION BEGIN (UNCHECKED): iFlight blitz 1.6 VTX
 # vtxtable
 serial 0 8192 115200 57600 0 115200
 vtxtable bands 5
@@ -363,7 +363,7 @@ profile 2
 set osd_pid_profile_name_pos = 2145
 #$ OPTION END
 
-#$ OPTION BEGIN (UNCHECKED): FlyMod Gravity 900KV PID/Filters
+#$ OPTION BEGIN (CHECKED): FlyMod Gravity 900KV PID/Filters
 
 set name = -ANGRYHORNET-
 set osd_craft_name_pos = 2120
@@ -445,7 +445,7 @@ set simplified_dterm_filter_multiplier = 80
 
 #$ OPTION END
 
-#$ OPTION BEGIN (CHECKED): BrotherHobby 1300KV PID/Filters 8 inch
+#$ OPTION BEGIN (UNCHECKED): BrotherHobby 1300KV PID/Filters 8 inch
 
 set name = -BUMBLEBEE-
 
