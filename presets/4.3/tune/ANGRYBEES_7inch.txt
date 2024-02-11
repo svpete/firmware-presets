@@ -131,7 +131,6 @@ vtxtable powerlabels 25 MAX
 
 #$ OPTION BEGIN (CHECKED): LST 5.8 3W VTX
 # vtxtable
-serial 0 8192 115200 57600 0 115200
 vtxtable bands 5
 vtxtable channels 8
 vtxtable band 1 BOSCAM_A A CUSTOM  5865 5845 5825 5805 5785 5765 5745 5725
@@ -434,7 +433,11 @@ set name = -ANGRYHORNET-
 set osd_craft_name_pos = 2120
 
 serial 0 0 115200 57600 0 115200
-serial 2 2048 115200 57600 0 115200
+# TBS SMART
+# serial 2 2048 115200 57600 0 115200
+# IRC Tramp SMART
+serial 2 8192 115200 57600 0 115200
+
 serial 5 64 115200 57600 0 115200
 
 # master
