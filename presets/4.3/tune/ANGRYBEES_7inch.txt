@@ -475,7 +475,7 @@ set simplified_dterm_filter_multiplier = 70
 
 #$ OPTION END
 
-#$ OPTION BEGIN (UNCHECKED): Diatone BrotherHobby 1300KV PID/Filters 8 inch
+#$ OPTION BEGIN (CHECKED): Diatone BrotherHobby 1300KV PID/Filters 8 inch
 
 serial 0 0 115200 57600 0 115200
 # TBS SMART
