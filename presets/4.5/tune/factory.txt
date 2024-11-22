@@ -1,0 +1,650 @@
+#$ TITLE: FACTORY
+#$ FIRMWARE_VERSION: 4.5
+#$ CATEGORY: TUNE
+#$ STATUS: EXPERIMENTAL
+#$ KEYWORDS: 
+#$ AUTHOR: Team Angry Bees
+
+#$ OPTION BEGIN (CHECKED): RESET
+defaults nosave
+#$ OPTION END
+
+set name = -ANGRYBEES-
+
+# feature
+feature -TELEMETRY
+feature ESC_SENSOR
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 13 3 1675 2075 0 0
+
+# rxfail
+set vtx_low_power_disarm = UNTIL_FIRST_ARM
+set failsafe_delay = 150
+set failsafe_off_delay = 197
+set failsafe_throttle = 1757
+set failsafe_switch_mode = STAGE2
+set failsafe_throttle_low_delay = 297
+set failsafe_procedure = AUTO-LAND
+set failsafe_recovery_delay = 17
+set failsafe_stick_threshold = 30
+
+rxfail 0 a
+rxfail 1 a
+rxfail 2 a
+rxfail 3 h
+rxfail 4 h
+rxfail 5 h
+rxfail 6 h
+rxfail 7 h
+rxfail 8 h
+rxfail 9 h
+rxfail 10 h
+
+set small_angle = 180
+
+# serial
+serial 0 2048 115200 57600 0 115200
+serial 1 0 115200 57600 0 115200
+serial 5 64 115200 57600 0 115200
+
+# master
+set serialrx_provider = CRSF
+set dshot_bidir = ON
+set yaw_motors_reversed = ON
+set motor_pwm_protocol = DSHOT300
+
+#$ OPTION BEGIN (CHECKED): Rush VTX
+# vtxtable
+vtxtable bands 7
+vtxtable channels 8
+vtxtable band 1 BAND_A   A CUSTOM  5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BAND_B   B CUSTOM  5733 5752 5771 5790 5999 5828 5847 5866
+vtxtable band 3 BAND_E   E CUSTOM  5705 5685 5665 5645 5885 5905 5925 5945
+vtxtable band 4 AIRWAVE  F CUSTOM  5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 LOWRACE  L CUSTOM  5362 5399 5436 5473 5510 5547 5584 5621
+vtxtable band 7 BAND_X  X CUSTOM  4990 5020 5050 5080 5110 5140 1570 5200
+vtxtable powerlevels 4
+vtxtable powervalues 14 26 29 32
+vtxtable powerlabels 25 400 800 MAX
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): Skyzone AtomRC VTX
+# vtxtable
+vtxtable bands 7
+vtxtable channels 8
+vtxtable band 1 BAND_A   A CUSTOM  5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BAND_B   B CUSTOM  5733 5752 5771 5790 5999 5828 5847 5866
+vtxtable band 3 BAND_E   E CUSTOM  5705 5685 5665 5645 5885 5905 5925 5945
+vtxtable band 4 AIRWAVE  F CUSTOM  5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 LOWRACE  L CUSTOM  5362 5399 5436 5473 5510 5547 5584 5621
+vtxtable band 7 BAND_X   X CUSTOM  4990 5020 5050 5080 5110 5140 1570 5200
+vtxtable powerlevels 4
+vtxtable powervalues 1 2 3 4
+vtxtable powerlabels 025 1.2 2.0 2.5
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): AKK Dominator VTX
+# vtxtable
+vtxtable bands 5
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A CUSTOM  5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B CUSTOM  5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E CUSTOM  5705 5685 5665    0 5885 5905    0    0
+vtxtable band 4 FATSHARK F CUSTOM  5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable powerlevels 4
+vtxtable powervalues 0 1 2 3
+vtxtable powerlabels 25 200 600 100
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): AKK RaceRanger VTX
+# vtxtable
+vtxtable bands 5
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B FACTORY 5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E FACTORY 5705 5685 5665 5645 5885 5905 5925 5945
+vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable powerlevels 4
+vtxtable powervalues 0 1 2 3
+vtxtable powerlabels 200 400 800 160
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): iFlight blitz 1.6 VTX
+# vtxtable
+serial 0 8192 115200 57600 0 115200
+vtxtable bands 5
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A CUSTOM  5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B CUSTOM  5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E CUSTOM  5705 5685 5665 5645 5885 5905 5925 5945
+vtxtable band 4 FATSHARK F CUSTOM  5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable powerlevels 4
+vtxtable powervalues 25 400 800 1600
+vtxtable powerlabels 25 400 800 1K6
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): RUSH 1.3 VTX
+# vtxtable
+serial 0 8192 115200 57600 0 115200
+vtxtable bands 2
+vtxtable channels 8
+vtxtable band 1 1G3_A    A CUSTOM  1080 1120 1160 1200 1240 1258 1280 1320
+vtxtable band 2 1G3_B    B CUSTOM  1120 1160 1200 1240 1258 1280 1320 1360
+vtxtable powerlevels 2
+vtxtable powervalues 25 1600
+vtxtable powerlabels 25 MAX
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): LST 5.8 3W VTX
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A CUSTOM  5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B CUSTOM  5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E CUSTOM  5705 5685 5665 5645 5885 5905 5925 5945
+vtxtable band 4 FATSHARK F CUSTOM  5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 LOWRACE  L CUSTOM  5362 5399 5436 5473 5510 5547 5584 5621
+vtxtable powerlevels 4
+vtxtable powervalues 25 1000 2000 3000
+vtxtable powerlabels 25 1W 2W 3W
+#$ OPTION END
+set vtx_band = 5
+
+#$ OPTION BEGIN (CHECKED): Full Power
+set vtx_power = 4
+#$ OPTION END
+
+#$ OPTION BEGIN (CHECKED): Channel 8
+set vtx_channel = 8
+set vtx_freq = 5917
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): Channel 1
+set vtx_channel = 1
+set vtx_freq = 5658
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): Low Power
+set vtx_power = 1
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): Drop System
+feature SERVO_TILT
+resource MOTOR 8 NONE
+resource SERVO 1 B04
+servo 0 1000 2000 1500 100 5
+#$ OPTION END
+
+#$ OPTION BEGIN (CHECKED): OSD
+set osd_warn_core_temp = OFF
+set osd_vbat_pos = 2081
+set osd_rssi_pos = 2458
+set osd_link_quality_pos = 2423
+set osd_rssi_dbm_pos = 299
+set osd_tim_2_pos = 2103
+set osd_flymode_pos = 57
+set osd_throttle_pos = 2433
+set osd_vtx_channel_pos = 21
+set osd_crosshairs_pos = 2253
+set osd_current_pos = 471
+set osd_mah_drawn_pos = 2400
+set osd_craft_name_pos = 2121
+set osd_gps_speed_pos = 129
+set osd_gps_lon_pos = 1
+set osd_gps_lat_pos = 33
+set osd_gps_sats_pos = 57
+set osd_home_dir_pos = 14
+set osd_home_dist_pos = 65
+set osd_compass_bar_pos = 2090
+set osd_altitude_pos = 2135
+set osd_pid_roll_pos = 161
+set osd_pid_pitch_pos = 129
+set osd_pid_yaw_pos = 97
+set osd_warnings_pos = 14697
+set osd_avg_cell_voltage_pos = 2113
+set osd_disarmed_pos = 288
+set vtx_band = 5
+set vtx_channel = 8
+set vtx_power = 4
+set vtx_low_power_disarm = UNTIL_FIRST_ARM
+set vtx_freq = 5917
+set vcd_video_system = PAL
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): Adjustments
+# adjrange
+adjrange 0 0 2 900 1300 6 3 0 0
+adjrange 1 0 2 1300 1700 7 3 0 0
+adjrange 2 0 2 1700 2100 8 3 0 0
+set osd_pid_roll_pos = 2209
+set osd_pid_pitch_pos = 2177
+set osd_pid_yaw_pos = 2145
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): FlyMod Gravity 1300KV / BrotherHobby 1300KV PID/Filters
+
+set dyn_notch_count = 5
+set dyn_notch_min_hz = 100
+set simplified_gyro_filter = OFF
+set simplified_gyro_filter_multiplier = 60
+
+profile 0
+
+# profile 0
+set profile_name = 6S
+set p_pitch = 53
+set i_pitch = 42
+set d_pitch = 43
+set f_pitch = 0
+set p_roll = 53
+set i_roll = 42
+set d_roll = 43
+set f_roll = 0
+set p_yaw = 90
+set i_yaw = 90
+set d_yaw = 12
+set f_yaw = 0
+set d_min_roll = 31
+set d_min_pitch = 31
+set auto_profile_cell_count = 6
+set thrust_linear = 20
+set dyn_idle_min_rpm = 40
+set simplified_pids_mode = OFF
+set simplified_i_gain = 95
+set simplified_d_gain = 90
+set simplified_pi_gain = 110
+set simplified_dterm_filter = OFF
+set simplified_dterm_filter_multiplier = 120
+
+profile 1
+
+# profile 1
+set profile_name = 5S
+set p_pitch = 52
+set i_pitch = 34
+set d_pitch = 31
+set f_pitch = 0
+set p_roll = 52
+set i_roll = 34
+set d_roll = 31
+set f_roll = 0
+set p_yaw = 60
+set i_yaw = 70
+set f_yaw = 0
+set d_min_roll = 25
+set d_min_pitch = 25
+set auto_profile_cell_count = 5
+set thrust_linear = 20
+set dyn_idle_min_rpm = 40
+set simplified_pids_mode = OFF
+set simplified_i_gain = 95
+set simplified_d_gain = 90
+set simplified_pi_gain = 110
+set simplified_dterm_filter = OFF
+set simplified_dterm_filter_multiplier = 120
+
+profile 2
+
+# profile 2
+set profile_name = 5S
+set p_pitch = 52
+set i_pitch = 34
+set d_pitch = 31
+set f_pitch = 0
+set p_roll = 52
+set i_roll = 34
+set d_roll = 31
+set f_roll = 0
+set p_yaw = 60
+set i_yaw = 70
+set f_yaw = 0
+set d_min_roll = 25
+set d_min_pitch = 25
+set auto_profile_cell_count = 5
+set thrust_linear = 20
+set dyn_idle_min_rpm = 40
+set simplified_pids_mode = OFF
+set simplified_i_gain = 95
+set simplified_d_gain = 90
+set simplified_pi_gain = 110
+set simplified_dterm_filter = OFF
+set simplified_dterm_filter_multiplier = 120
+
+# restore original profile selection
+profile 0
+
+set osd_pid_profile_name_pos = 2145
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): XING-E Pro 2306 1700KV PID/Filters
+# master
+set dyn_notch_count = 1
+set dyn_notch_q = 500
+set dyn_notch_min_hz = 100
+set simplified_gyro_filter = OFF
+set simplified_gyro_filter_multiplier = 60
+
+profile 0
+
+# profile 0
+set profile_name = 4S
+set p_pitch = 63
+set i_pitch = 63
+set d_pitch = 57
+set f_pitch = 100
+set p_roll = 61
+set i_roll = 59
+set d_roll = 52
+set f_roll = 100
+set p_yaw = 80
+set i_yaw = 83
+set f_yaw = 100
+set d_min_roll = 27
+set d_min_pitch = 30
+set auto_profile_cell_count = 4
+set thrust_linear = 20
+set dyn_idle_min_rpm = 40
+set simplified_pids_mode = OFF
+set simplified_i_gain = 95
+set simplified_d_gain = 90
+set simplified_pi_gain = 110
+set simplified_dterm_filter = OFF
+set simplified_dterm_filter_multiplier = 120
+
+profile 1
+
+# profile 1
+set profile_name = 6S
+set p_pitch = 75
+set i_pitch = 54
+set d_pitch = 50
+set f_pitch = 100
+set p_roll = 73
+set i_roll = 50
+set d_roll = 44
+set f_roll = 100
+set p_yaw = 85
+set f_yaw = 100
+set auto_profile_cell_count = 6
+set simplified_pids_mode = OFF
+
+profile 2
+
+# profile 2
+set profile_name = 5S
+set p_pitch = 69
+set i_pitch = 88
+set d_pitch = 67
+set f_pitch = 100
+set p_roll = 64
+set i_roll = 89
+set d_roll = 69
+set f_roll = 100
+set p_yaw = 67
+set i_yaw = 86
+set f_yaw = 100
+set d_min_roll = 35
+set d_min_pitch = 37
+set auto_profile_cell_count = 5
+set simplified_pids_mode = OFF
+
+# restore original profile selection
+profile 2
+
+set osd_pid_profile_name_pos = 2145
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): FlyMod Gravity 900KV PID/Filters
+
+set name = -ANGRYHORNET-
+set osd_craft_name_pos = 2120
+
+# master
+set gyro_lpf1_static_hz = 175
+set gyro_lpf2_static_hz = 350
+set dyn_notch_count = 5
+set dyn_notch_min_hz = 65
+set gyro_lpf1_dyn_min_hz = 175
+set gyro_lpf1_dyn_max_hz = 350
+
+set simplified_gyro_filter_multiplier = 70
+set rpm_filter_min_hz = 70
+
+profile 0
+
+set dterm_lpf1_dyn_min_hz = 52
+set dterm_lpf1_dyn_max_hz = 105
+set dterm_lpf1_static_hz = 52
+set dterm_lpf2_static_hz = 105
+set p_pitch = 82
+set i_pitch = 119
+set d_pitch = 104
+set f_pitch = 100
+set p_roll = 82
+set i_roll = 119
+set d_roll = 104
+set f_roll = 100
+set p_yaw = 70
+set f_yaw = 100
+set d_min_roll = 80
+set d_min_pitch = 80
+set simplified_pids_mode = OFF
+set simplified_dterm_filter_multiplier = 70
+
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): Diatone Gravity 900KV PID/Filters
+
+set name = -ANGRYHORNET-
+set osd_craft_name_pos = 2120
+
+serial 0 0 115200 57600 0 115200
+# TBS SMART
+# serial 2 2048 115200 57600 0 115200
+# IRC Tramp SMART
+serial 2 8192 115200 57600 0 115200
+
+serial 5 64 115200 57600 0 115200
+
+# master
+set gyro_lpf1_static_hz = 175
+set gyro_lpf2_static_hz = 350
+set dyn_notch_count = 5
+set dyn_notch_min_hz = 65
+set gyro_lpf1_dyn_min_hz = 175
+set gyro_lpf1_dyn_max_hz = 350
+
+set simplified_gyro_filter_multiplier = 70
+set rpm_filter_min_hz = 70
+
+profile 0
+
+set dterm_lpf1_dyn_min_hz = 52
+set dterm_lpf1_dyn_max_hz = 105
+set dterm_lpf1_static_hz = 52
+set dterm_lpf2_static_hz = 105
+set p_pitch = 82
+set i_pitch = 119
+set d_pitch = 104
+set f_pitch = 100
+set p_roll = 82
+set i_roll = 119
+set d_roll = 104
+set f_roll = 100
+set p_yaw = 70
+set f_yaw = 100
+set d_min_roll = 80
+set d_min_pitch = 80
+set simplified_pids_mode = OFF
+set simplified_dterm_filter_multiplier = 70
+
+#$ OPTION END
+
+#$ OPTION BEGIN (CHECKED): Diatone BrotherHobby 1300KV PID/Filters 8 inch
+
+serial 0 0 115200 57600 0 115200
+# TBS SMART
+serial 2 2048 115200 57600 0 115200
+# IRC Tramp SMART
+#serial 2 8192 115200 57600 0 115200
+serial 5 64 115200 57600 0 115200
+
+set name = -BUMBLEBEE-
+
+set gyro_lpf1_static_hz = 200
+set gyro_lpf2_static_hz = 400
+set dyn_notch_count = 5
+set dyn_notch_min_hz = 100
+set gyro_lpf1_dyn_min_hz = 200
+set gyro_lpf1_dyn_max_hz = 400
+set rpm_filter_min_hz = 80
+set simplified_gyro_filter_multiplier = 80
+
+profile 0
+
+# profile 0
+set dterm_lpf1_dyn_min_hz = 60
+set dterm_lpf1_dyn_max_hz = 120
+set dterm_lpf1_static_hz = 60
+set dterm_lpf2_static_hz = 120
+set simplified_dterm_filter_multiplier = 80
+set p_pitch = 51
+set i_pitch = 40
+set d_pitch = 44
+set f_pitch = 100
+set p_roll = 51
+set i_roll = 40
+set d_roll = 44
+set f_roll = 100
+set p_yaw = 90
+set i_yaw = 90
+set d_yaw = 12
+set f_yaw = 100
+set d_min_roll = 38
+set d_min_pitch = 38
+set auto_profile_cell_count = 6
+set thrust_linear = 20
+set dyn_idle_min_rpm = 40
+set simplified_pids_mode = OFF
+set simplified_i_gain = 95
+set simplified_d_gain = 90
+set simplified_pi_gain = 110
+
+profile 1
+
+# profile 1
+set profile_name = 5S
+set p_pitch = 52
+set i_pitch = 34
+set d_pitch = 31
+set f_pitch = 0
+set p_roll = 52
+set i_roll = 34
+set d_roll = 31
+set f_roll = 0
+set p_yaw = 60
+set i_yaw = 70
+set f_yaw = 0
+set d_min_roll = 25
+set d_min_pitch = 25
+set auto_profile_cell_count = 5
+set thrust_linear = 20
+set dyn_idle_min_rpm = 40
+set simplified_pids_mode = OFF
+set simplified_i_gain = 95
+set simplified_d_gain = 90
+set simplified_pi_gain = 110
+set dterm_lpf1_dyn_min_hz = 60
+set dterm_lpf1_dyn_max_hz = 120
+set dterm_lpf1_static_hz = 60
+set dterm_lpf2_static_hz = 120
+set simplified_dterm_filter_multiplier = 80
+profile 2
+
+# profile 2
+set profile_name = 5S
+set p_pitch = 52
+set i_pitch = 34
+set d_pitch = 31
+set f_pitch = 0
+set p_roll = 52
+set i_roll = 34
+set d_roll = 31
+set f_roll = 0
+set p_yaw = 60
+set i_yaw = 70
+set f_yaw = 0
+set d_min_roll = 25
+set d_min_pitch = 25
+set auto_profile_cell_count = 5
+set thrust_linear = 20
+set dyn_idle_min_rpm = 40
+set simplified_pids_mode = OFF
+set simplified_i_gain = 95
+set simplified_d_gain = 90
+set simplified_pi_gain = 110
+set dterm_lpf1_dyn_min_hz = 60
+set dterm_lpf1_dyn_max_hz = 120
+set dterm_lpf1_static_hz = 60
+set dterm_lpf2_static_hz = 120
+set simplified_dterm_filter_multiplier = 80
+
+# restore original profile selection
+profile 0
+
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): Diatone Flashhobby ARTUR 900KV PID/Filters 10 inch
+
+serial 0 0 115200 57600 0 115200
+serial 2 2048 115200 57600 0 115200
+serial 5 64 115200 57600 0 115200
+
+set name = -BOMBLEBEE-
+set osd_craft_name_pos = 2121
+
+# master
+set gyro_lpf1_static_hz = 200
+set gyro_lpf2_static_hz = 400
+set dyn_notch_count = 5
+set dyn_notch_min_hz = 75
+set gyro_lpf1_dyn_min_hz = 200
+set gyro_lpf1_dyn_max_hz = 400
+
+set simplified_gyro_filter_multiplier = 80
+set rpm_filter_min_hz = 60
+
+profile 0
+
+set dterm_lpf1_dyn_min_hz = 60
+set dterm_lpf1_dyn_max_hz = 120
+set dterm_lpf1_static_hz = 60
+set dterm_lpf2_static_hz = 120
+set p_pitch = 89
+set i_pitch = 44
+set d_pitch = 60
+set f_pitch = 100
+set p_roll = 89
+set i_roll = 44
+set d_roll = 60
+set f_roll = 100
+set p_yaw = 70
+set f_yaw = 100
+set d_min_roll = 45
+set d_min_pitch = 45
+set simplified_pids_mode = OFF
+set simplified_dterm_filter_multiplier = 80
+
+#$ OPTION END

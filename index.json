@@ -7258,6 +7258,19 @@
       "priority": 1000000000000
     },
     {
+      "fullPath": "presets/4.5/tune/factory.txt",
+      "hash": "ecfdf88ebb6407135d5472f06c854866c4e320b518c78ffc19c7ce7b1a648767",
+      "title": "FACTORY",
+      "firmware_version": [
+        "4.5"
+      ],
+      "category": "TUNE",
+      "status": "EXPERIMENTAL",
+      "keywords": [],
+      "author": "Team Angry Bees",
+      "priority": 1000000000000
+    },
+    {
       "fullPath": "presets/4.5/tune/fpvian_basher_freestyle.txt",
       "hash": "763018fe6435f1ccaf5c51573955b9362aaa29459ad616980f82efbecd1be5ff",
       "title": "Basher Freestyle 6S 5\" by FPVian",
