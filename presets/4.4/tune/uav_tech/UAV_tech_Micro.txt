@@ -1,7 +1,7 @@
 #$ TITLE: UAV Tech - Micro (2" to 4")
 #$ FIRMWARE_VERSION: 4.4
 #$ CATEGORY: TUNE
-#$ STATUS: EXPERIMENTAL
+#$ STATUS: OFFICIAL
 #$ KEYWORDS: 2S, 3S, 4S, 6S, toothpic, 2in, 2.5in, 3in, 3.5in, 4in
 #$ AUTHOR: UAV Tech (Mark Spatz)
 
@@ -107,7 +107,7 @@ set pidsum_limit_yaw = 1000
     #$ OPTION END
 #$ OPTION_GROUP END
 
-#$ OPTION_GROUP BEGIN: ESC PWM Options ...
+#$ OPTION_GROUP BEGIN: (EXCLUSIVE) ESC PWM Options ...
     #$ OPTION BEGIN (CHECKED): 16 & 24k ESC PWM Settings
     	# -- ADDER: For 16 & 24k ESC PWM Settings --
     	set thrust_linear = 0

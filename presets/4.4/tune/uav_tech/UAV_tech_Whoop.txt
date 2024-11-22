@@ -1,7 +1,7 @@
 #$ TITLE: UAV Tech - Whoop (1S & 2S)
 #$ FIRMWARE_VERSION: 4.4
 #$ CATEGORY: TUNE
-#$ STATUS: EXPERIMENTAL
+#$ STATUS: OFFICIAL
 #$ KEYWORDS: whoop
 #$ AUTHOR: UAV Tech (Mark Spatz)
 
@@ -45,6 +45,8 @@
 #$ DISCUSSION: https://github.com/betaflight/firmware-presets/pull/210
 #$ INCLUDE: presets/4.4/tune/defaults.txt
 #$ INCLUDE: presets/4.3/filters/defaults.txt
+
+set motor_poles = 12
 
 # -- PID Settings --
 set simplified_d_gain = 140
@@ -109,7 +111,7 @@ set pidsum_limit_yaw = 1000
     #$ OPTION END
 #$ OPTION_GROUP END
 
-#$ OPTION_GROUP BEGIN: ESC PWM Options ...
+#$ OPTION_GROUP BEGIN: (EXCLUSIVE) ESC PWM Options ...
     #$ OPTION BEGIN (UNCHECKED): 16 & 24k ESC PWM Settings
     	# -- ADDER: For 16 & 24k ESC PWM Settings --
     	set thrust_linear = 0
